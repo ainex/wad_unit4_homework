@@ -2,15 +2,27 @@
     'use strict';
 
     var SearchController = function ($location, productService, searchFormService) {
-        var _this = this;
+
         this.$location = $location;
         this.productService = productService;
         this.searchFormService = searchFormService;
 
-        productService.find()
-            .then(function (data) {
-                _this.products = data;
-            });
+        var params = searchFormService.fromRequestParams($location.search());
+        if(!_.isEmpty(params)){
+            this.find();
+        }
+
+    };
+
+    SearchController.prototype ={
+        find: function(){
+            var params = this.searchFormService.toRequestParams();
+            this.$location.search(params);
+            this.productService.find(params).then(function(data){
+                this.products = data;
+            }.bind(this));
+        }
+
     };
 
     SearchController.$inject = [

@@ -18,6 +18,7 @@
           templateUrl: 'views/search.html',
           controller: 'SearchController',
           controllerAs: 'ctrl',
+          reloadOnSearch: false,
           title: title('Search')
         })
         .when('/product/:productId', {

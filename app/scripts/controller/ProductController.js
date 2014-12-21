@@ -7,13 +7,13 @@
     this.searchFormService = searchFormService;
   };
 
- /* ProductController.prototype ={
+  ProductController.prototype ={
     find: function(){
       this.$location
           .path('/search')
           .search(this.searchFormService.toRequestParams());
     }
-  };*/
+  };
 
   ProductController.$inject = ['$location', 'SearchFormService','product'];
   angular.module('auction').controller('ProductController', ProductController);
