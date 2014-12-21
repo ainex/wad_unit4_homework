@@ -37,8 +37,8 @@
          });
     }])
     .config(['RestangularProvider', function (RestangularProvider) {
-      RestangularProvider.setBaseUrl('data');
-      RestangularProvider.setRequestSuffix('.json');
+      RestangularProvider.setBaseUrl('//private-d315d-webauction.apiary-mock.com');
+      //RestangularProvider.setRequestSuffix('.json');
     }])
     .run(['$rootScope', function ($rootScope) {
       $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {

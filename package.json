@@ -23,6 +23,7 @@
     "grunt-svgmin": "^2.0.0",
     "grunt-usemin": "^2.3.0",
     "grunt-wiredep": "^2.0.0",
+    "gulp-ng-html2js": "^0.1.8",
     "jpegtran-bin": "latest",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.12.16",
