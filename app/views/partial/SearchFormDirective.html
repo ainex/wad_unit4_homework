@@ -3,7 +3,7 @@
     <div class="row form-group">
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">Product</label>
-        <input type="text" class="form-control" placeholder="Product title">
+        <input type="text" class="form-control" placeholder="Product title" ng-model="ctrl.productTitle" ng-minlength="3" name="productTitle">
       </div>
       <div class="col-xs-12 col-sm-6 col-md-12">
         <label class="control-label">&nbsp;</label>
@@ -42,7 +42,7 @@
                   <label class="control-label">Number of Bids</label>
                 </div>
                 <div class="col-xs-4">
-                  <input type="number" class="form-control" value="3">
+                  <input type="number" class="form-control" value="3" min="0" ng-model="ctrl.numberOfBids">
                 </div>
               </div>
             </form>
