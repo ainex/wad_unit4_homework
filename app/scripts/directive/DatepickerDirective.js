@@ -6,7 +6,9 @@
       scope: false,
       restrict: 'A',
       link: function (scope, element) {
-        element.datepicker();
+        element.datepicker({
+          startDate: '-0d'
+        });
       }
     };
   };
